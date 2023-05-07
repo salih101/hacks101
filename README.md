@@ -15,3 +15,7 @@ Copy `Dialog101.res` and `remote_auto.bat` to
 **STEP 3**
 
 Import `Chrome_remote_autobot.xml` Using **Task Scheduler**
+
+#Wake-On-Lan Setup
+
+**Option 1 :** [Wolow](https://wolow.site/#about)
