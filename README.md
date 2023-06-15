@@ -2,20 +2,37 @@
 
  **STEP 1**
  
- Add to **Environment Varable** Using CMD 
+ Download **[NirCmd](https://www.nirsoft.net/utils/nircmd-x64.zip)** 
+ 
+ 1. Download and Extract Nircmd
+ 2. Run `nircmd.exe`
+ 3. Click `Copy to Windows Directory` Button
+
+____
+  **STEP 2**
+ 
+ Download **[Resource Hacker](http://www.angusj.com/resourcehacker/reshacker_setup.exe)** 
+ 
+ 1. Download and Install Resource Hacker
+____
+ **STEP 3**
+ 
+ Add to **Environment Variable** Using CMD 
 
     setx PATH "%PATH%;C:\Program Files (x86)\Resource Hacker"
-
-**STEP 2**
+____
+**STEP 4**
 
 Copy `Dialog101.res` and `remote_auto.bat` to 
 
     C:\Program Files (x86)\Google\Chrome Remote Desktop
-    
-**STEP 3**
+____
+**STEP 5**
 
-Import `Chrome_remote_autobot.xml` Using **Task Scheduler**
+Run CMD by `Run as Admin` and Copy Paste Below cammand
 
+    schtasks /Create /TN "Chrome_remote_autobot" /SC ONLOGON /RL HIGHEST /TR "cmd /C cd \"C:\Program Files (x86)\Google\Chrome Remote Desktop\" && nircmd exec hide \"remote_auto.bat\""
+_____
 # Wake-On-Lan Setup
 
 **Option 1 :** [Wolow](https://wolow.site/#about)
